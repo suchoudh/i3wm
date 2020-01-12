@@ -9,14 +9,6 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-
-# Gaps not working yet  Need to get this right sunil 
-
-gaps inner 20
-gaps outer 5 
-
-for_window [class="^.*"] border pixel 2
-
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -44,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # lock  window (working) 
-bindsym $mod+shift+x exec i3lock --color 600a50
+bindsym $mod+shift+x exec i3lock
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -107,8 +99,8 @@ set $workspace1 "1:Editor"
 set $workspace2 "2:Firefox"
 set $workspace3 "3:FileMgr"
 set $workspace4 "4:Calibre"
-set $workspace5 "5:LibreOffice"
-set $workspace6 "6:TimedWork"
+set $workspace5 "5:Temp5"
+set $workspace6 "6:Temp6"
 set $workspace7 "7:Temp7"
 set $workspace8 "8:Temp8"
 set $workspace9 "9:TR"
@@ -181,40 +173,23 @@ bar {
 }
 
 # Custom code below 
-# How to find class of the window 
-# Ans : use xprop 
-assign [class="Gnome-terminal"] $workspace1
+
+#assign [class="Gnome-terminal"] $workspace1
 assign [class="Firefox"] $workspace2
 assign [class="Nautilus"] $workspace3
 assign [class="calibre"] $workspace4
-assign [class="libreoffice"] $workspace5
-assign [class="trgtd-clock-ThinkingClock"] $workspace6
-assign [class="Gnome-clocks"] $workspace6
 assign [class="ThinkingRock"] $workspace9
 assign [class="Audacious"] $workspace10
 for_window[class="Spotify"] move to workspace $workspace10
 assign [class="Spotify"] $workspace10
 assign [class="Spotify"] $workspace10
 
-exec_always gnome-terminal 
-exec_always gnome-terminal 
-exec compton 
- 
-#exec flashfocus --opacity 0.85 --default-opacity 1
-#exec flashfocus --opacity 0.6 --default-opacity 0.8 --time 500
-exec reminder
-# exec watch -n 30 feh --randomize --bg-max $BGPics
-# exec_always firefox  # not able to run two firefox together as gives error 
-exec firefox --private-window
+exec_always terminal 
+exec_always firefox 
 # exec_always audacious 
-exec nautilus 
+exec_always nautilus 
 #exec_always feh --bg-scale /home/rahu/Pictures/_Desktop/desktop.jpg 
-#exec_always feh --bg-center ~/.config/wall.png 
-exec_always feh --bg-fill ~/.config/wall.png 
-#exec_always watch -n 60 feh --randomize --bg-fill /home/rahu/Pictures/Wallpapers/wallpapers/myinspiration/myArtistic/*
-exec_always java -jar /home/rahu/ThinkingClock/ThinkingClock.jar ; #move postion center # gnome-clock works better for me
-#exec_always gnome-clocks 
-
+exec_always feh --bg-center /home/rahu/Pictures/_Desktop/desktop.png 
 #interactive screenshot by pressing printscreen
 bindsym Print exec gnome-screenshot -i 
 

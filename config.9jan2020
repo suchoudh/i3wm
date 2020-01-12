@@ -12,7 +12,7 @@
 
 # Gaps not working yet  Need to get this right sunil 
 
-gaps inner 20
+gaps inner 10
 gaps outer 5 
 
 for_window [class="^.*"] border pixel 2
@@ -199,15 +199,14 @@ assign [class="Spotify"] $workspace10
 exec_always gnome-terminal 
 exec_always gnome-terminal 
 exec compton 
- 
 #exec flashfocus --opacity 0.85 --default-opacity 1
-#exec flashfocus --opacity 0.6 --default-opacity 0.8 --time 500
-exec reminder
+exec flashfocus --opacity 0.6 --default-opacity 0.8 --time 500
+exec watch -n 420 notify-send -t 4000 "are_u_?" "finding_next_job" -u critical
 # exec watch -n 30 feh --randomize --bg-max $BGPics
 # exec_always firefox  # not able to run two firefox together as gives error 
-exec firefox --private-window
+exec_always firefox --private-window
 # exec_always audacious 
-exec nautilus 
+exec_always nautilus 
 #exec_always feh --bg-scale /home/rahu/Pictures/_Desktop/desktop.jpg 
 #exec_always feh --bg-center ~/.config/wall.png 
 exec_always feh --bg-fill ~/.config/wall.png 
