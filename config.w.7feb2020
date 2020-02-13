@@ -111,7 +111,7 @@ set $workspace4 "4:Calibre"
 set $workspace5 "5:LibreOffice"
 set $workspace6 "6:TimedWork"
 set $workspace7 "7:Temp7"
-set $workspace8 "8:FreeMind"
+set $workspace8 "8:Temp8"
 set $workspace9 "9:TR"
 set $workspace10 "10:Music"
 
@@ -190,7 +190,6 @@ assign [class="Nemo"] $workspace3
 assign [class="calibre"] $workspace4
 assign [class="libreoffice"] $workspace5
 assign [class="trgtd-clock-ThinkingClock"] $workspace6
-assign [class="FreeMind"] $workspace8
 assign [class="Gnome-clocks"] $workspace6
 assign [class="ThinkingRock"] $workspace9
 assign [class="Audacious"] $workspace10
