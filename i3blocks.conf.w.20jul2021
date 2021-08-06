@@ -62,9 +62,9 @@ signal=10
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 #[disk]
-#label=HOME
-#instance=/dev/mapper/ubuntu--vg-root
-#interval=30
+label=HOME
+instance=/dev/mapper/ubuntu--vg-root
+interval=30
 
 # Network interface monitoring
 #
@@ -97,7 +97,7 @@ min_width=CPU: 100.00%
 #separator=false
 
 [load_average]
-label=La
+label=LA
 interval=3
 
 # Battery indicator
@@ -113,7 +113,7 @@ interval=10
 #
 [time]
 color=#66ccff
-command=date '+Wk %W %c'
+command=date '+Week %W %c'
 interval=3
 #interval=once
 
@@ -148,10 +148,10 @@ signal=10
 #bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 #bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
-#[keyindicator]
-#instance=CAPS
-#interval=once
-#signal=11
+[keyindicator]
+instance=CAPS
+interval=once
+signal=11
 
 #[keyindicator]
 #instance=NUM

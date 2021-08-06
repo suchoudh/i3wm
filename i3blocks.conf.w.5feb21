@@ -62,9 +62,9 @@ signal=10
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 #[disk]
-#label=HOME
-#instance=/dev/mapper/ubuntu--vg-root
-#interval=30
+label=HOME
+#instance=/mnt/data
+interval=30
 
 # Network interface monitoring
 #
@@ -92,13 +92,13 @@ interval=5
 # see the script for details.
 [cpu_usage]
 label=CPU
-interval=3
+interval=10
 min_width=CPU: 100.00%
 #separator=false
 
 [load_average]
-label=La
-interval=3
+label=LA
+interval=10
 
 # Battery indicator
 #
@@ -107,15 +107,14 @@ interval=3
 #label=BAT
 label=⚡
 #instance=1
-interval=10
+interval=30
 
 # Date Time
 #
 [time]
 color=#66ccff
-command=date '+Wk %W %c'
-interval=3
-#interval=once
+command=date '+Week %W %c'
+interval=5
 
 # Generic media player support
 #
@@ -162,12 +161,7 @@ signal=10
 full_text=Cal
 command=gnome-calculator >/dev/null
 
-[Memo-button]
-full_text=Memo
-command=leafpad >/dev/null
-
 [public-ip]
-#full_text=test
 command=wget -qO - icanhazip.com
 interval=once
 
